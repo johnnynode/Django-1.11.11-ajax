@@ -15,5 +15,5 @@
 
 ### 运行
 
-- $ `python3 manage.py runserver` 或 $`python manage.py runserver` 根据自己的环境处理
+- $ `python3 manage.py runserver` 或 $`python manage.py runserver` 根据自己的环境执行
 - 访问: `http://localhost:8000`
