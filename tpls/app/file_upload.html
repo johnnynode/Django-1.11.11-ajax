@@ -1,0 +1,15 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+<h3>file 文件上传示例</h3>
+<hr />
+
+<form method="post" action="{% url 'upload' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="pic"/>
+    <br>
+    <br>
+    <input type="submit" value="上传">
+</form>
+
+{% endblock %}

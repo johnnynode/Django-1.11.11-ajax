@@ -1,0 +1,17 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+
+Hello Django 1.11
+<hr>
+
+<ul>
+    <li><a href="{% url 'cities' %}">cities</a></li>
+    <li><a href="{% url 'files' %}">files</a></li>
+    <li><a href="{% url 'page' 1 %}">page</a></li>
+    <li><a href="{% url 'my_ueditor' %}">ueditor</a></li>
+    <li><a href="{% url 'state' %}">state</a></li>
+    <li><a href="{% url 'middleware' %}">middleware</a></li>
+    <li><a href="{% url 'password' %}">password</a></li>
+</ul>
+{% endblock %}

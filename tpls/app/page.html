@@ -1,0 +1,35 @@
+{% extends "common/base.html" %}
+
+{% block content %}
+<h3>page 分页示例</h3>
+<hr />
+
+<table border=1>
+    <tr><th>ID</th><th>姓名</th><th>年龄</th><th>手机</th><th>创建时间</th></tr>
+    {%for u in list%}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.name }}</td>
+            <td>{{ u.age }}</td>
+            <td>{{ u.phone }}</td>
+            <td>{{ u.createTime | date:'Y-m-d H:i:s' }}</td>
+        </tr>
+    {%endfor%}
+    
+</table>
+
+<br/>
+<br/>
+<br/>
+
+{% for i in plist %}
+    {% if pIndex == i %}
+        <b style="color:red">{{i}}</b>
+        &nbsp;&nbsp;
+    {% else %}
+        <a href="{% url 'page' i %}">{{i}}</a>
+        &nbsp;&nbsp;
+    {%endif%}
+{%endfor%}
+
+{% endblock %}
